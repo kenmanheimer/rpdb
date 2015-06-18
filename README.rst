@@ -1,7 +1,7 @@
 rpdb - remote debugger based on pdb
 ===================================
 
-rpbm is a wrapper around pdb that re-routes stdin and stdout to a socket
+rpdb is a wrapper around pdb that re-routes stdin and stdout to a socket
 handler. By default it opens the debugger on port 4444::
 
     import rpdb; rpdb.set_trace()
@@ -9,7 +9,7 @@ handler. By default it opens the debugger on port 4444::
 But you can change that by simply instantiating Rpdb manually::
 
     import rpdb
-    debugger = rpdb.Rpdb(12345)
+    debugger = rpdb.Rpdb(port=12345)
     debugger.set_trace()
 
 It is known to work on Jython 2.5 to 2.7, Python 2.5 to 3.1. It was written
@@ -49,6 +49,8 @@ Bertrand Janin <b@janin.com> - http://tamentis.com/
 
 With contributions from (chronological, latest first):
 
+ - Cameron Davidson-Pilon - @CamDavidsonPilon
+ - Pavel Fux - @fuxpavel
  - Ken Manheimer - @kenmanheimer
  - Steven Willis - @onlynone
  - Jorge Niedbalski R <niedbalski@gmail.com>
